@@ -14,6 +14,8 @@ const (
 	IDENT = "IDENT" // add, foobar, x, y, ...
 	INT   = "INT"   // 1342456
 	// 演算子
+	EQ       = "=="
+	NOT_EQ   = "!="
 	ASSIGN   = "="
 	PLUS     = "+"
 	MINUS    = "-"
@@ -32,11 +34,21 @@ const (
 	// キーワード
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
+	TRUE     = "TRUE"
+	FALSE    = "FALSE"
+	IF       = "IF"
+	ELSE     = "ELSE"
+	RETURN   = "RETURN"
 )
 
 var keywords = map[string]TokenType{
-	"fn":  FUNCTION,
-	"let": LET,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
+	"return": RETURN,
 }
 
 // keywordsテーブルをチェックし、渡された識別子がキーワードかどうか確認す.
