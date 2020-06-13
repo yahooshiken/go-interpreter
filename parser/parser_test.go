@@ -13,7 +13,9 @@ let x = 5;
 let y = 10;
 let foobar = 838383;
 `
+	// lexer（字句解析器）を生成.
 	l := lexer.New(input)
+	// parser（構文解析器）を生成.
 	p := New(l)
 
 	program := p.ParseProgram()

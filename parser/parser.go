@@ -30,11 +30,14 @@ func (p *Parser) nextToken() {
 }
 
 func (p *Parser) ParseProgram() *ast.Program {
+	// ASR のルートノードを生成する.
 	program := &ast.Program{}
 	program.Statements = []ast.Statement{}
 
+	// EOF に達するまで入力のトークンを繰り返して読む.
 	for p.curToken.Type != token.EOF {
 		stmt := p.parseStatement()
+
 		if stmt != nil {
 			program.Statements = append(program.Statements, stmt)
 		}
