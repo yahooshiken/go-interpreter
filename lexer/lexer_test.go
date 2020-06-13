@@ -3,7 +3,7 @@ package lexer
 import (
 	"testing"
 
-	"../token"
+	"github.com/yahooshiken/interpreter/token"
 )
 
 func TestNextToken(t *testing.T) {

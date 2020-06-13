@@ -5,7 +5,7 @@ import (
 	"os"
 	"os/user"
 
-	"./repl"
+	"github.com/yahooshiken/interpreter/repl"
 )
 
 func main() {

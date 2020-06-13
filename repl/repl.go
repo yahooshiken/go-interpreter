@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 
-	"../lexer"
-	"../token"
+	"github.com/yahooshiken/interpreter/lexer"
+	"github.com/yahooshiken/interpreter/token"
 )
 
 const PROMPT = ">> "
